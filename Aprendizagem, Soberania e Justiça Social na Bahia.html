@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aprendizagem, Soberania e Justiça Social na Bahia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6fa;--ink:#13213d;--muted:#4a5875;--azul:#1b3f8b;--dende:#e8960c;--verde:#176b57;--card:#ffffff;--line:#d3dae8;--on-azul:#ffffff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1730;--ink:#eaf0fb;--muted:#a9b6d3;--azul:#0b1f52;--dende:#f5b13a;--verde:#4fc0a3;--card:#16224a;--line:#2a3a6b;--on-azul:#ffffff}}
+:root[data-theme="dark"]{--bg:#0e1730;--ink:#eaf0fb;--muted:#a9b6d3;--azul:#0b1f52;--dende:#f5b13a;--verde:#4fc0a3;--card:#16224a;--line:#2a3a6b;--on-azul:#ffffff}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.08rem/1.7 "Source Serif 4",Georgia,serif}
+h1,h2,h3,nav,.btn{font-family:"Bricolage Grotesque",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--dende);outline-offset:3px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:1.2rem;justify-content:flex-end;padding:.8rem 1.2rem;background:var(--bg);border-bottom:1px solid var(--line);font-size:.95rem;font-weight:500;overflow-x:auto}
+nav a{text-decoration:none;white-space:nowrap}
+nav a:hover{color:var(--dende)}
+.hero{background:var(--azul);color:var(--on-azul);padding:4rem 1.2rem 4.5rem;position:relative;overflow:hidden;
+background-image:linear-gradient(45deg,rgba(255,255,255,.07) 25%,transparent 25%,transparent 75%,rgba(255,255,255,.07) 75%),linear-gradient(45deg,rgba(255,255,255,.07) 25%,transparent 25%,transparent 75%,rgba(255,255,255,.07) 75%);background-size:56px 56px;background-position:0 0,28px 28px}
+.wrap{max-width:1040px;margin:0 auto}
+.hero h1{font-size:clamp(2.2rem,7vw,4.6rem);line-height:1.04;margin:0 0 1.2rem;font-weight:800;letter-spacing:-.02em;max-width:15em}
+.hero p{max-width:36em;font-size:1.2rem;margin:0 0 2rem;color:#dbe5fb}
+.btn{display:inline-block;padding:.85rem 1.5rem;background:var(--dende);color:#13213d;font-weight:700;text-decoration:none;border-radius:6px}
+.btn.alt{background:transparent;color:inherit;border:2px solid currentColor;margin-left:.6rem}
+.faixa{height:12px;background:linear-gradient(90deg,var(--dende) 0 33%,var(--verde) 33% 66%,#c0392b 66%)}
+section{padding:4rem 1.2rem}
+.tema h2{font-size:clamp(1.7rem,4.5vw,2.8rem);line-height:1.1;margin:.2rem 0 1rem;font-weight:800;max-width:18em;letter-spacing:-.01em}
+.lead{max-width:38em;color:var(--muted);font-size:1.15rem}
+.grid{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:2.2rem}
+.pilar{background:var(--card);border-left:6px solid var(--c,var(--azul));padding:1.3rem 1.3rem 1.4rem;border-radius:0 10px 10px 0}
+.pilar h3{margin:0 0 .5rem;font-size:1.2rem}
+.pilar p{margin:0;color:var(--muted);font-size:1rem;line-height:1.6}
+#t1{--c:var(--dende)} #t2{--c:var(--verde)}
+.alt-bg{background:var(--card);border-block:1px solid var(--line)}
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.6rem 0 1rem}
+.tabs button{font:600 .98rem "Bricolage Grotesque",system-ui,sans-serif;padding:.6rem 1.1rem;border:2px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--verde);border-color:var(--verde);color:#fff}
+.painel{max-width:42em;min-height:7rem}
+.painel[hidden]{display:none}
+.citacao{background:var(--azul);color:var(--on-azul);text-align:center}
+.citacao blockquote{margin:0 auto;max-width:30em;font-size:clamp(1.3rem,3.5vw,2rem);line-height:1.4;font-style:italic}
+.citacao cite{display:block;margin-top:1rem;font:500 1rem "Bricolage Grotesque",sans-serif;font-style:normal;color:var(--dende)}
+.passos{counter-reset:p;list-style:none;padding:0;margin:2rem 0 0;display:grid;gap:1rem;max-width:44em}
+.passos li{counter-increment:p;display:flex;gap:1rem;align-items:flex-start}
+.passos li::before{content:counter(p);flex:none;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--dende);color:#13213d;font:700 1rem/2.2rem "Bricolage Grotesque",sans-serif;text-align:center}
+footer{padding:2.5rem 1.2rem;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media (max-width:520px){.btn.alt{margin:.6rem 0 0}}
+</style>
+</head>
+<body>
+<nav aria-label="Principal">
+<a href="#aprendizagem">Aprendizagem</a><a href="#cidadania">Cidadania digital</a><a href="#praticas">Práticas</a><a href="#participe">Participe</a>
+</nav>
+
+<header class="hero">
+<div class="wrap">
+<h1>Aprender para decidir o próprio destino</h1>
+<p>Na Bahia, conhecimento é ferramenta de soberania. Reunimos ideias, práticas e caminhos para que educação e tecnologia sirvam à justiça social e ao poder do povo.</p>
+<a class="btn" href="#aprendizagem">Conheça os dois eixos</a><a class="btn alt" href="#participe">Como participar</a>
+</div>
+</header>
+<div class="faixa" aria-hidden="true"></div>
+
+<section class="tema" id="aprendizagem">
+<div class="wrap" id="t1">
+<h2>Aprendizagem como promotora da soberania e da justiça social na Bahia</h2>
+<p class="lead">Quem aprende amplia a capacidade de escolher, reivindicar e transformar. Na Bahia, esse processo parte de uma história de resistência, de saberes afro-indígenas e de uma educação que reconhece o território como sala de aula.</p>
+<div class="grid">
+<article class="pilar"><h3>Educação enraizada no território</h3><p>Currículos que dialogam com quilombos, terreiros, comunidades ribeirinhas, o sertão e o litoral, valorizando quem já produz conhecimento ali.</p></article>
+<article class="pilar"><h3>Igualdade de oportunidades</h3><p>Acesso, permanência e êxito para jovens e adultos, com atenção a raça, gênero, renda e deficiência.</p></article>
+<article class="pilar"><h3>Autonomia intelectual</h3><p>Pensamento crítico e leitura de mundo, no espírito de Paulo Freire: ler a palavra para transformar a realidade.</p></article>
+<article class="pilar"><h3>Soberania econômica local</h3><p>Formação técnica e popular ligada à agricultura familiar, ao cooperativismo, à cultura e à economia solidária.</p></article>
+</div>
+</div>
+</section>
+
+<section class="tema alt-bg" id="cidadania">
+<div class="wrap" id="t2">
+<h2>Cidadania digital, difusão do conhecimento e soberania popular</h2>
+<p class="lead">Quem não tem acesso à rede, aos dados e às habilidades digitais fica fora do debate público. Cidadania digital é garantir que todas as pessoas participem, informem-se e decidam.</p>
+<div class="grid">
+<article class="pilar"><h3>Conectividade como direito</h3><p>Internet de qualidade em escolas, bibliotecas e comunidades, inclusive no interior e nas áreas rurais.</p></article>
+<article class="pilar"><h3>Conhecimento aberto</h3><p>Recursos educacionais livres, acervos públicos digitalizados e ciência que circula para além da universidade.</p></article>
+<article class="pilar"><h3>Letramento midiático</h3><p>Identificar desinformação, proteger dados pessoais e usar as plataformas com consciência e segurança.</p></article>
+<article class="pilar"><h3>Participação popular</h3><p>Orçamento participativo, consultas públicas e transparência de dados para que o povo acompanhe e decida.</p></article>
+</div>
+</div>
+</section>
+
+<section id="praticas">
+<div class="wrap">
+<h2 style="font-size:clamp(1.7rem,4.5vw,2.6rem);margin:0;font-weight:800">Práticas que colocam as ideias em movimento</h2>
+<div class="tabs" role="tablist" aria-label="Práticas">
+<button role="tab" aria-selected="true" aria-controls="p1" id="b1">Escola</button>
+<button role="tab" aria-selected="false" aria-controls="p2" id="b2">Comunidade</button>
+<button role="tab" aria-selected="false" aria-controls="p3" id="b3">Poder público</button>
+</div>
+<div class="painel" role="tabpanel" id="p1" aria-labelledby="b1"><p>Projetos interdisciplinares sobre a história e a cultura locais, laboratórios de informática com software livre e grêmios que usam dados da escola para propor melhorias.</p></div>
+<div class="painel" role="tabpanel" id="p2" aria-labelledby="b2" hidden><p>Oficinas de cidadania digital em associações de moradores, rádios comunitárias, pontos de cultura e telecentros, conduzidas por quem vive o território.</p></div>
+<div class="painel" role="tabpanel" id="p3" aria-labelledby="b3" hidden><p>Portais de dados abertos, plataformas de consulta pública e formação continuada de professores e servidores para uma gestão aberta ao controle social.</p></div>
+</div>
+</section>
+
+<section class="citacao" aria-label="Princípio">
+<blockquote>“Ninguém educa ninguém, ninguém se educa sozinho: os homens se educam entre si, mediatizados pelo mundo.”<cite>Paulo Freire, Pedagogia do Oprimido</cite></blockquote>
+</section>
+
+<section id="participe">
+<div class="wrap">
+<h2 style="font-size:clamp(1.7rem,4.5vw,2.6rem);margin:0;font-weight:800">Como participar</h2>
+<ol class="passos">
+<li><span>Compartilhe uma experiência de ensino ou de inclusão digital da sua comunidade.</span></li>
+<li><span>Organize uma roda de conversa na escola, associação ou coletivo da sua cidade.</span></li>
+<li><span>Cobre do poder público conectividade, dados abertos e formação para todas as pessoas.</span></li>
+</ol>
+</div>
+</section>
+
+<footer><div class="wrap">Aprendizagem, soberania e justiça social na Bahia. Conteúdo para debate público e formação cidadã.</div></footer>
+
+<script>
+(function(){
+var tabs=document.querySelectorAll('[role="tab"]');
+tabs.forEach(function(t){t.addEventListener('click',function(){
+tabs.forEach(function(o){var sel=o===t;o.setAttribute('aria-selected',sel);document.getElementById(o.getAttribute('aria-controls')).hidden=!sel;});
+});});
+})();
+</script>
+</body>
+</html>
